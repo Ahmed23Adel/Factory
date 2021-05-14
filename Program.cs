@@ -16,7 +16,9 @@ namespace Factory
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            var log_form = new Login();
+            log_form.Show();
+            Application.Run();
         }
     }
 }
