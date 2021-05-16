@@ -31,15 +31,19 @@ namespace Factory.Manager
         {
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.id = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cost = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.username = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.done = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.nameunderline = new System.Windows.Forms.Label();
+            this.costunderline = new System.Windows.Forms.Label();
+            this.idunderline = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -59,16 +63,17 @@ namespace Factory.Manager
             this.label6.TabIndex = 34;
             this.label6.Text = "Birth date";
             // 
-            // textBox3
+            // id
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
-            this.textBox3.Location = new System.Drawing.Point(161, 191);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(188, 34);
-            this.textBox3.TabIndex = 33;
+            this.id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
+            this.id.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
+            this.id.Location = new System.Drawing.Point(161, 191);
+            this.id.Multiline = true;
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(188, 34);
+            this.id.TabIndex = 33;
+            this.id.TextChanged += new System.EventHandler(this.id_TextChanged);
             // 
             // label4
             // 
@@ -80,16 +85,17 @@ namespace Factory.Manager
             this.label4.TabIndex = 32;
             this.label4.Text = "ID";
             // 
-            // textBox2
+            // cost
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
-            this.textBox2.Location = new System.Drawing.Point(161, 113);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 34);
-            this.textBox2.TabIndex = 31;
+            this.cost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
+            this.cost.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
+            this.cost.Location = new System.Drawing.Point(161, 113);
+            this.cost.Multiline = true;
+            this.cost.Name = "cost";
+            this.cost.Size = new System.Drawing.Size(188, 34);
+            this.cost.TabIndex = 31;
+            this.cost.TextChanged += new System.EventHandler(this.cost_TextChanged);
             // 
             // label3
             // 
@@ -101,16 +107,17 @@ namespace Factory.Manager
             this.label3.TabIndex = 30;
             this.label3.Text = "Cost";
             // 
-            // username
+            // name
             // 
-            this.username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
-            this.username.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
-            this.username.Location = new System.Drawing.Point(161, 21);
-            this.username.Multiline = true;
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(188, 34);
-            this.username.TabIndex = 29;
+            this.name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
+            this.name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
+            this.name.Location = new System.Drawing.Point(161, 21);
+            this.name.Multiline = true;
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(188, 34);
+            this.name.TabIndex = 29;
+            this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
             // 
             // label1
             // 
@@ -136,19 +143,20 @@ namespace Factory.Manager
             this.button3.Text = "Cancel";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // done
             // 
-            this.button4.AutoEllipsis = true;
-            this.button4.BackColor = System.Drawing.Color.Black;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(459, 332);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(188, 45);
-            this.button4.TabIndex = 48;
-            this.button4.Text = "Done";
-            this.button4.UseVisualStyleBackColor = false;
+            this.done.AutoEllipsis = true;
+            this.done.BackColor = System.Drawing.Color.Black;
+            this.done.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.done.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.done.ForeColor = System.Drawing.Color.White;
+            this.done.Location = new System.Drawing.Point(459, 332);
+            this.done.Name = "done";
+            this.done.Size = new System.Drawing.Size(188, 45);
+            this.done.TabIndex = 48;
+            this.done.Text = "Done";
+            this.done.UseVisualStyleBackColor = false;
+            this.done.Click += new System.EventHandler(this.done_Click);
             // 
             // button5
             // 
@@ -164,21 +172,72 @@ namespace Factory.Manager
             this.button5.Text = "Remove";
             this.button5.UseVisualStyleBackColor = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(43, 191);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(25, 31);
+            this.label7.TabIndex = 50;
+            this.label7.Text = "*";
+            // 
+            // nameunderline
+            // 
+            this.nameunderline.AutoSize = true;
+            this.nameunderline.ForeColor = System.Drawing.Color.Red;
+            this.nameunderline.Location = new System.Drawing.Point(161, 58);
+            this.nameunderline.Name = "nameunderline";
+            this.nameunderline.Size = new System.Drawing.Size(147, 17);
+            this.nameunderline.TabIndex = 51;
+            this.nameunderline.Text = "--------------------------------------";
+            this.nameunderline.UseCompatibleTextRendering = true;
+            this.nameunderline.Visible = false;
+            // 
+            // costunderline
+            // 
+            this.costunderline.AutoSize = true;
+            this.costunderline.ForeColor = System.Drawing.Color.Red;
+            this.costunderline.Location = new System.Drawing.Point(158, 150);
+            this.costunderline.Name = "costunderline";
+            this.costunderline.Size = new System.Drawing.Size(147, 17);
+            this.costunderline.TabIndex = 52;
+            this.costunderline.Text = "--------------------------------------";
+            this.costunderline.UseCompatibleTextRendering = true;
+            this.costunderline.Visible = false;
+            // 
+            // idunderline
+            // 
+            this.idunderline.AutoSize = true;
+            this.idunderline.ForeColor = System.Drawing.Color.Red;
+            this.idunderline.Location = new System.Drawing.Point(161, 228);
+            this.idunderline.Name = "idunderline";
+            this.idunderline.Size = new System.Drawing.Size(147, 17);
+            this.idunderline.TabIndex = 53;
+            this.idunderline.Text = "--------------------------------------";
+            this.idunderline.UseCompatibleTextRendering = true;
+            this.idunderline.Visible = false;
+            // 
             // Edit_product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.idunderline);
+            this.Controls.Add(this.costunderline);
+            this.Controls.Add(this.nameunderline);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.done);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.id);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.cost);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.username);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.label1);
             this.Name = "Edit_product";
             this.Text = "Edit_product";
@@ -190,14 +249,18 @@ namespace Factory.Manager
         #endregion
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox id;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox cost;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox username;
+        private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button done;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label nameunderline;
+        private System.Windows.Forms.Label costunderline;
+        private System.Windows.Forms.Label idunderline;
     }
 }

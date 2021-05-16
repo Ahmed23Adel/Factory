@@ -30,31 +30,36 @@ namespace Factory.Manager
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_product));
-            this.button1 = new System.Windows.Forms.Button();
+            this.done = new System.Windows.Forms.Button();
             this.loginButton = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.id = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cost = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.username = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.nameunderline = new System.Windows.Forms.Label();
+            this.costunderline = new System.Windows.Forms.Label();
+            this.idunderline = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // done
             // 
-            this.button1.AutoEllipsis = true;
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(434, 352);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 45);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Done";
-            this.button1.UseVisualStyleBackColor = false;
+            this.done.AutoEllipsis = true;
+            this.done.BackColor = System.Drawing.Color.Black;
+            this.done.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.done.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.done.ForeColor = System.Drawing.Color.White;
+            this.done.Location = new System.Drawing.Point(434, 352);
+            this.done.Name = "done";
+            this.done.Size = new System.Drawing.Size(188, 45);
+            this.done.TabIndex = 27;
+            this.done.Text = "Done";
+            this.done.UseVisualStyleBackColor = false;
+            this.done.Click += new System.EventHandler(this.done_Click);
             // 
             // loginButton
             // 
@@ -70,16 +75,17 @@ namespace Factory.Manager
             this.loginButton.Text = "Cancel";
             this.loginButton.UseVisualStyleBackColor = false;
             // 
-            // textBox3
+            // id
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
-            this.textBox3.Location = new System.Drawing.Point(161, 193);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(188, 34);
-            this.textBox3.TabIndex = 21;
+            this.id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
+            this.id.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
+            this.id.Location = new System.Drawing.Point(161, 193);
+            this.id.Multiline = true;
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(188, 34);
+            this.id.TabIndex = 21;
+            this.id.TextChanged += new System.EventHandler(this.id_TextChanged);
             // 
             // label4
             // 
@@ -91,16 +97,17 @@ namespace Factory.Manager
             this.label4.TabIndex = 20;
             this.label4.Text = "ID";
             // 
-            // textBox2
+            // cost
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
-            this.textBox2.Location = new System.Drawing.Point(161, 115);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 34);
-            this.textBox2.TabIndex = 19;
+            this.cost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
+            this.cost.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
+            this.cost.Location = new System.Drawing.Point(161, 115);
+            this.cost.Multiline = true;
+            this.cost.Name = "cost";
+            this.cost.Size = new System.Drawing.Size(188, 34);
+            this.cost.TabIndex = 19;
+            this.cost.TextChanged += new System.EventHandler(this.cost_TextChanged);
             // 
             // label3
             // 
@@ -112,16 +119,17 @@ namespace Factory.Manager
             this.label3.TabIndex = 18;
             this.label3.Text = "Cost";
             // 
-            // username
+            // name
             // 
-            this.username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
-            this.username.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
-            this.username.Location = new System.Drawing.Point(161, 23);
-            this.username.Multiline = true;
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(188, 34);
-            this.username.TabIndex = 15;
+            this.name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
+            this.name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
+            this.name.Location = new System.Drawing.Point(161, 23);
+            this.name.Multiline = true;
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(188, 34);
+            this.name.TabIndex = 15;
+            this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
             // 
             // label1
             // 
@@ -151,20 +159,71 @@ namespace Factory.Manager
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 25;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(43, 193);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(25, 31);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "*";
+            // 
+            // nameunderline
+            // 
+            this.nameunderline.AutoSize = true;
+            this.nameunderline.ForeColor = System.Drawing.Color.Red;
+            this.nameunderline.Location = new System.Drawing.Point(158, 60);
+            this.nameunderline.Name = "nameunderline";
+            this.nameunderline.Size = new System.Drawing.Size(147, 17);
+            this.nameunderline.TabIndex = 30;
+            this.nameunderline.Text = "--------------------------------------";
+            this.nameunderline.UseCompatibleTextRendering = true;
+            this.nameunderline.Visible = false;
+            // 
+            // costunderline
+            // 
+            this.costunderline.AutoSize = true;
+            this.costunderline.ForeColor = System.Drawing.Color.Red;
+            this.costunderline.Location = new System.Drawing.Point(161, 152);
+            this.costunderline.Name = "costunderline";
+            this.costunderline.Size = new System.Drawing.Size(147, 17);
+            this.costunderline.TabIndex = 31;
+            this.costunderline.Text = "--------------------------------------";
+            this.costunderline.UseCompatibleTextRendering = true;
+            this.costunderline.Visible = false;
+            // 
+            // idunderline
+            // 
+            this.idunderline.AutoSize = true;
+            this.idunderline.ForeColor = System.Drawing.Color.Red;
+            this.idunderline.Location = new System.Drawing.Point(158, 230);
+            this.idunderline.Name = "idunderline";
+            this.idunderline.Size = new System.Drawing.Size(147, 17);
+            this.idunderline.TabIndex = 32;
+            this.idunderline.Text = "--------------------------------------";
+            this.idunderline.UseCompatibleTextRendering = true;
+            this.idunderline.Visible = false;
+            // 
             // Add_product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.idunderline);
+            this.Controls.Add(this.costunderline);
+            this.Controls.Add(this.nameunderline);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.done);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.id);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.cost);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.username);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Add_product";
@@ -176,15 +235,19 @@ namespace Factory.Manager
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button done;
         private System.Windows.Forms.Button loginButton;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox id;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox cost;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox username;
+        private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label nameunderline;
+        private System.Windows.Forms.Label costunderline;
+        private System.Windows.Forms.Label idunderline;
     }
 }

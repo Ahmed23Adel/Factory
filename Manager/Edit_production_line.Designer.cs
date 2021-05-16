@@ -30,25 +30,29 @@ namespace Factory.Manager
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edit_production_line));
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.id = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.username = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.done = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.idunderline = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox2
+            // id
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
-            this.textBox2.Location = new System.Drawing.Point(266, 121);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 34);
-            this.textBox2.TabIndex = 31;
+            this.id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
+            this.id.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
+            this.id.Location = new System.Drawing.Point(266, 121);
+            this.id.Multiline = true;
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(188, 34);
+            this.id.TabIndex = 31;
+            this.id.TextChanged += new System.EventHandler(this.id_TextChanged);
             // 
             // label3
             // 
@@ -60,16 +64,17 @@ namespace Factory.Manager
             this.label3.TabIndex = 30;
             this.label3.Text = "ID";
             // 
-            // username
+            // name
             // 
-            this.username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
-            this.username.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
-            this.username.Location = new System.Drawing.Point(266, 29);
-            this.username.Multiline = true;
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(188, 34);
-            this.username.TabIndex = 29;
+            this.name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
+            this.name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
+            this.name.Location = new System.Drawing.Point(266, 29);
+            this.name.Multiline = true;
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(188, 34);
+            this.name.TabIndex = 29;
+            this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
             // 
             // label1
             // 
@@ -95,19 +100,20 @@ namespace Factory.Manager
             this.button3.Text = "Cancel";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // done
             // 
-            this.button4.AutoEllipsis = true;
-            this.button4.BackColor = System.Drawing.Color.Black;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(434, 200);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(188, 45);
-            this.button4.TabIndex = 48;
-            this.button4.Text = "Done";
-            this.button4.UseVisualStyleBackColor = false;
+            this.done.AutoEllipsis = true;
+            this.done.BackColor = System.Drawing.Color.Black;
+            this.done.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.done.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.done.ForeColor = System.Drawing.Color.White;
+            this.done.Location = new System.Drawing.Point(434, 200);
+            this.done.Name = "done";
+            this.done.Size = new System.Drawing.Size(188, 45);
+            this.done.TabIndex = 48;
+            this.done.Text = "Done";
+            this.done.UseVisualStyleBackColor = false;
+            this.done.Click += new System.EventHandler(this.done_Click);
             // 
             // button5
             // 
@@ -123,17 +129,55 @@ namespace Factory.Manager
             this.button5.Text = "Remove";
             this.button5.UseVisualStyleBackColor = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(157, 121);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(25, 31);
+            this.label7.TabIndex = 50;
+            this.label7.Text = "*";
+            // 
+            // idunderline
+            // 
+            this.idunderline.AutoSize = true;
+            this.idunderline.ForeColor = System.Drawing.Color.Red;
+            this.idunderline.Location = new System.Drawing.Point(264, 158);
+            this.idunderline.Name = "idunderline";
+            this.idunderline.Size = new System.Drawing.Size(147, 17);
+            this.idunderline.TabIndex = 51;
+            this.idunderline.Text = "--------------------------------------";
+            this.idunderline.UseCompatibleTextRendering = true;
+            this.idunderline.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(264, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(147, 17);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "--------------------------------------";
+            this.label2.UseCompatibleTextRendering = true;
+            this.label2.Visible = false;
+            // 
             // Edit_production_line
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(674, 296);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.idunderline);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.done);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.id);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.username);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Edit_production_line";
@@ -144,12 +188,15 @@ namespace Factory.Manager
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox id;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox username;
+        private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button done;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label idunderline;
+        private System.Windows.Forms.Label label2;
     }
 }

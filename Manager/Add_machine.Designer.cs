@@ -30,27 +30,31 @@ namespace Factory.Manager
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_machine));
-            this.button1 = new System.Windows.Forms.Button();
+            this.done = new System.Windows.Forms.Button();
             this.loginButton = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.id = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.username = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.nameunderline = new System.Windows.Forms.Label();
+            this.idunderline = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // done
             // 
-            this.button1.AutoEllipsis = true;
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(352, 242);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 45);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Done";
-            this.button1.UseVisualStyleBackColor = false;
+            this.done.AutoEllipsis = true;
+            this.done.BackColor = System.Drawing.Color.Black;
+            this.done.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.done.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.done.ForeColor = System.Drawing.Color.White;
+            this.done.Location = new System.Drawing.Point(352, 242);
+            this.done.Name = "done";
+            this.done.Size = new System.Drawing.Size(188, 45);
+            this.done.TabIndex = 27;
+            this.done.Text = "Done";
+            this.done.UseVisualStyleBackColor = false;
+            this.done.Click += new System.EventHandler(this.done_Click);
             // 
             // loginButton
             // 
@@ -66,16 +70,17 @@ namespace Factory.Manager
             this.loginButton.Text = "Cancel";
             this.loginButton.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // id
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
-            this.textBox2.Location = new System.Drawing.Point(161, 130);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 34);
-            this.textBox2.TabIndex = 19;
+            this.id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
+            this.id.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
+            this.id.Location = new System.Drawing.Point(161, 130);
+            this.id.Multiline = true;
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(188, 34);
+            this.id.TabIndex = 19;
+            this.id.TextChanged += new System.EventHandler(this.id_TextChanged);
             // 
             // label3
             // 
@@ -87,16 +92,17 @@ namespace Factory.Manager
             this.label3.TabIndex = 18;
             this.label3.Text = "ID";
             // 
-            // username
+            // name
             // 
-            this.username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
-            this.username.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
-            this.username.Location = new System.Drawing.Point(161, 38);
-            this.username.Multiline = true;
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(188, 34);
-            this.username.TabIndex = 15;
+            this.name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
+            this.name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
+            this.name.Location = new System.Drawing.Point(161, 38);
+            this.name.Multiline = true;
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(188, 34);
+            this.name.TabIndex = 15;
+            this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
             // 
             // label1
             // 
@@ -108,16 +114,54 @@ namespace Factory.Manager
             this.label1.TabIndex = 14;
             this.label1.Text = "Name";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(43, 124);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(25, 31);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "*";
+            // 
+            // nameunderline
+            // 
+            this.nameunderline.AutoSize = true;
+            this.nameunderline.ForeColor = System.Drawing.Color.Red;
+            this.nameunderline.Location = new System.Drawing.Point(161, 75);
+            this.nameunderline.Name = "nameunderline";
+            this.nameunderline.Size = new System.Drawing.Size(147, 17);
+            this.nameunderline.TabIndex = 29;
+            this.nameunderline.Text = "--------------------------------------";
+            this.nameunderline.UseCompatibleTextRendering = true;
+            this.nameunderline.Visible = false;
+            // 
+            // idunderline
+            // 
+            this.idunderline.AutoSize = true;
+            this.idunderline.ForeColor = System.Drawing.Color.Red;
+            this.idunderline.Location = new System.Drawing.Point(161, 167);
+            this.idunderline.Name = "idunderline";
+            this.idunderline.Size = new System.Drawing.Size(147, 17);
+            this.idunderline.TabIndex = 30;
+            this.idunderline.Text = "--------------------------------------";
+            this.idunderline.UseCompatibleTextRendering = true;
+            this.idunderline.Visible = false;
+            // 
             // Add_machine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(612, 353);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.idunderline);
+            this.Controls.Add(this.nameunderline);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.done);
             this.Controls.Add(this.loginButton);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.id);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.username);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Add_machine";
@@ -129,11 +173,14 @@ namespace Factory.Manager
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button done;
         private System.Windows.Forms.Button loginButton;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox id;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox username;
+        private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label nameunderline;
+        private System.Windows.Forms.Label idunderline;
     }
 }
